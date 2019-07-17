@@ -3,6 +3,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
+				sh 'pwd;ls'
 				sh 'docker build -t helloJenkins:1.0 -f ../dockerfile/Dockerfile'
 			}
 		}
