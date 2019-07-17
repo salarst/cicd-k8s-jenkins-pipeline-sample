@@ -1,11 +1,7 @@
 pipeline {
 	agent any
 	stages {
-		stage('prepare') {
-			steps {
-				sh 'which yum'
-			}
-		}
+		
 		stage('Build') {
 			steps {
 				sh 'docker build -t helloJenkins:1.0 /home/jenkins/workspace/pipelineLearning/dockerfile/Dockerfile'
