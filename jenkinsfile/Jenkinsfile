@@ -20,7 +20,7 @@ pipeline {
 		stage('Deploy') {
 			steps {
 				echo "==============k8s deploy============"
-				sh "kubectl apply -f  helloJenkins.yaml"
+				sh "kubectl apply -f  jenkinsfile/helloJenkins.yaml"
 			}
 		}
 	}
