@@ -9,6 +9,7 @@ spec:
     image: 192.168.33.9:5000/k8s/app/hellojenkins:1.0
     imagePullPolicy: IfNotPresent
     resources:
-      cpu: 1000m
-      memory: 1Gi
+      requests:
+        cpu: 1000m
+        memory: 1Gi
     
