@@ -4,7 +4,7 @@ pipeline {
 		
 		stage('Build') {
 			steps {
-				sh 'docker build -t helloJenkins:1.0 /home/jenkins/workspace/pipelineLearning/dockerfile/Dockerfile'
+				sh 'docker build -t hellojenkins:1.7 /home/jenkins/workspace/pipelineLearning/dockerfile/Dockerfile'
 			}
 		}
 	}
