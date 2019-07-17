@@ -2,7 +2,9 @@ pipeline {
 	agent {lable 'jnlp-slave'}
 	stages {
 		stage('Build') {
-			sh 'docker build -t helloJenkins:1.0 -f ../dockerfile/Dockerfile'
+			steps {
+				sh 'docker build -t helloJenkins:1.0 -f ../dockerfile/Dockerfile'
+			}
 		}
 	}
 }
