@@ -4,7 +4,7 @@ pipeline {
 		
 		stage('Build') {
 			steps {
-				sh 'docker build -t hellojenkins:1.7 ./dockerfile'
+				sh 'docker build -t hellojenkins:1.7 .'
 			}
 		}
 	}
