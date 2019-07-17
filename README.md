@@ -1,8 +1,8 @@
 ### 描述
 ---
 这是一个jenkins on k8s的测试方法，采用pipeline做了如下三步
-- **docker build**:把代码加到基础镜像包当中
-- **docker push**:把生成的镜像push到对应的仓库当中
+- **docker build** :把代码加到基础镜像包当中
+- **docker push** :把生成的镜像push到对应的仓库当中
 - **部署到k8s当中**
 ---
 ### jenkins配置部署
