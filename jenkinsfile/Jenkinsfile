@@ -4,7 +4,7 @@ pipeline {
 		
 		stage('Build') {
 			steps {
-				sh "========docker build============"
+				echo "========docker build============"
 				sh 'docker build -t 192.168.33.9:5000/k8s/app/hellojenkins:1.0 .'
 			}
 		}
