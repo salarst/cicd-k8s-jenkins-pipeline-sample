@@ -16,5 +16,12 @@ pipeline {
 				
 			}
 		}
+		
+		state('Deploy') {
+			steps {
+				echo "==============k8s deploy============"
+				sh "kubectl apply -f  helloJenkins.yaml"
+			}
+		}
 	}
 }
