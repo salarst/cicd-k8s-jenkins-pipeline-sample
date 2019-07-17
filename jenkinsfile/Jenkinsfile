@@ -4,7 +4,18 @@ pipeline {
 		
 		stage('Build') {
 			steps {
-				sh 'docker build -t hellojenkins:1.7 .'
+				sh "========echo docker build============"
+				sh 'docker build -t 192.168.33.9:5000/k8s/app/hellojenkins:1.0 .'
+			}
+		}
+		
+		stage('Push') {
+			steps {
+				sh "=========echo push docker images====="
+				def exitValue = sh( script: "docker push 192.168.33.9:5000/k8s/app/hellojenkins:1.0",returnStatus: true)
+				if (exitValue ==0) {
+					sh "echo push success!"
+				}
 			}
 		}
 	}
