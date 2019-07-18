@@ -10,3 +10,4 @@
 ---
 ### 总结
 - 最开始把dockerfile放到jenkinsfile目录下，使用```docker build -t xx:xx .```。这样的格式发现路径不对，jenkins在执行pipeline时，是在**项目根目录下**执行的。所以就把dockerfile放到了根目录下
+- 使用动态jenkins-slave执行任务时，会不定时的报```java.nio.channels.ClosedChannelException```这种类型的错。同时有slave当中执行docker build时报没有权限。待解决
